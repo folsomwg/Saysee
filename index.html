@@ -1,0 +1,117 @@
+<html>
+<script type="text/javascript">
+	var total;
+	var inputText;
+	var returnString;
+
+	function saysee() {
+	    initialize();
+
+	    var prev = parseInt(inputText.charAt(0));
+	    var cur = 0;
+
+	    for (var i = 1; i < inputText.length; i++) {
+
+	        cur = parseInt(inputText.charAt(i));
+
+	        if (cur == prev) total++;
+	        else {
+	        	returnString += intToString(total) + " " + prev;
+
+	        	if (total == 1) returnString += ", ";
+	            else returnString += "s, ";
+
+	            total = 1;
+	        }
+
+	        prev = cur;
+	    }
+
+	    returnString += intToString(total) + " " + prev;
+
+	    if (total == 1) returnString += " ";
+	    else returnString += "s";
+
+	    if (returnString.includes("NaN")) {
+	    	returnString = "Please input integers."
+	    }
+
+		document.getElementById("inputText").value = "";
+	    document.getElementById("outputText").innerHTML = returnString;
+	}
+
+	function intToString(input) {
+	    switch (input) {
+	        case 1:
+	            return "One";
+	        case 2:
+	            return "Two";
+	        case 3:
+	            return "Three";
+	        case 4:
+	            return "Four";
+	        case 5:
+	            return "Five";
+	        case 6:
+	            return "Six";
+	        case 7:
+	            return "Seven";
+	        case 8:
+	            return "Eight";
+	        case 9:
+	            return "Nine";
+	        default:
+	            return "More than nine";
+	    }
+	}
+
+	function initialize() {
+	    total = 1;
+	    inputText = document.getElementById("inputText").value;
+	    returnString = "";
+	}
+</script>
+<head>
+	<style>
+		#container {
+			position: relative;
+			top: 200px;
+			text-align: center;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 14px;
+		}
+		button {
+			border-style: solid;
+			border-radius: 5px;
+			border-width: 1px;
+			border-color: #000;
+			background-color: #fff;
+			padding: 4px 10px;
+			font-size: 10px;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+			transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+		}
+		button:hover{
+			background-color: #3498db;
+			border-color: #3498db;
+			color: #fff;
+			cursor: pointer;
+		}
+		input {
+			border-color: #000;
+			border-width: 1px;
+			position: relative;
+			top: 1px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<input type="text" id="inputText"/>
+		<button type="button" onclick="saysee()">SUBMIT</button>
+		<p id="outputText">Input some integers.</p>
+	</div>
+</body>
+</html>
