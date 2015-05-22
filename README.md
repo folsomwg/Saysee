@@ -1,7 +1,5 @@
 # Saysee
 
-www.willfolsom.com/Saysee.html
-
 Simple one page app I coded up while on a flight.
 
 If you type in a string of integers, the app will tell you how many of each integer you typed in sequence.
@@ -14,3 +12,5 @@ For instance:
 55522555 -> Three 5's, Two 2's, Three 5's
 
 1111111111 -> More than nine 1's
+
+<a href="http://www.willfolsom.com/Saysee.html">But don't take my word for it - try it yourself.</a>
