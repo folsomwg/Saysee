@@ -11,19 +11,14 @@
 	    var cur = 0;
 
 	    for (var i = 1; i < inputText.length; i++) {
-
 	        cur = parseInt(inputText.charAt(i));
-
 	        if (cur == prev) total++;
 	        else {
-	        	returnString += intToString(total) + " " + prev;
-
-	        	if (total == 1) returnString += ", ";
+        	    returnString += intToString(total) + " " + prev;
+	            if (total == 1) returnString += ", ";
 	            else returnString += "s, ";
-
 	            total = 1;
 	        }
-
 	        prev = cur;
 	    }
 
