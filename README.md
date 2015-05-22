@@ -5,8 +5,6 @@
 If you type in a string of integers, the app will tell you how many of each integer you typed in sequence.
 
 
-For instance:
-
 555 -> Three 5's
 
 55522555 -> Three 5's, Two 2's, Three 5's
