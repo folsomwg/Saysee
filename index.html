@@ -36,7 +36,7 @@
 	    	returnString = "Please input integers."
 	    }
 
-		document.getElementById("inputText").value = "";
+	    document.getElementById("inputText").value = "";
 	    document.getElementById("outputText").innerHTML = returnString;
 	}
 
@@ -66,9 +66,9 @@
 	}
 
 	function initialize() {
-	    total = 1;
-	    inputText = document.getElementById("inputText").value;
-	    returnString = "";
+	    	total = 1;
+	    	inputText = document.getElementById("inputText").value;
+	    	returnString = "";
 	}
 
 	function rubiksColor(x) {
@@ -78,8 +78,8 @@
 
 		var ran = Math.floor((Math.random() * 9));
 
-	    x.style.backgroundColor = possibleColors[ran];
-		x.style.borderColor = possibleColors[ran];
+	    	x.style.backgroundColor = possibleColors[ran];
+	       	x.style.borderColor = possibleColors[ran];
 	}
 
 	function resetColor(x) {
