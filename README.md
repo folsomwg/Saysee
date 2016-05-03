@@ -4,7 +4,7 @@ You'll need a version of Chrome after 41 in order for this to work (when Array.p
 
 http://www.willfolsom.com/Saysee.html
 
-#HowTo
+#Howto
 
 If you type in a string of integers, the app will tell you how many of each integer you typed in sequence.
 
